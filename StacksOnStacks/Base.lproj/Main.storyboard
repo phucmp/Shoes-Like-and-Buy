@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,25 +136,33 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-wi-Zvs">
                                 <rect key="frame" x="100" y="77.5" width="175" height="512"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlike" translatesAutoresizingMaskIntoConstraints="NO" id="SKB-Ba-xqq">
+                                <rect key="frame" x="116" y="77.5" width="143" height="512"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="nfo-B6-GJ0" secondAttribute="bottom" constant="20" id="03w-eN-Xxe"/>
+                            <constraint firstItem="SKB-Ba-xqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="0fa-yI-R8V"/>
+                            <constraint firstItem="SKB-Ba-xqq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6go-oi-uVK"/>
                             <constraint firstItem="01n-U9-v0D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6hI-hY-GOl"/>
                             <constraint firstItem="O9U-wi-Zvs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9OZ-8i-6Kd"/>
                             <constraint firstItem="01n-U9-v0D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UnH-WD-fyO"/>
                             <constraint firstItem="O9U-wi-Zvs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4X-nx-blM"/>
                             <constraint firstItem="nfo-B6-GJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="f2G-bM-hwa"/>
                             <constraint firstItem="O9U-wi-Zvs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="mnP-G4-sxd"/>
+                            <constraint firstItem="SKB-Ba-xqq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o7H-vK-ycc"/>
                             <constraint firstAttribute="trailing" secondItem="O9U-wi-Zvs" secondAttribute="trailing" constant="100" id="oAK-ya-q0W"/>
                             <constraint firstItem="nfo-B6-GJ0" firstAttribute="top" secondItem="01n-U9-v0D" secondAttribute="bottom" constant="20" id="q9d-Cb-yv1"/>
                             <constraint firstAttribute="trailing" secondItem="01n-U9-v0D" secondAttribute="trailing" id="qcx-Gc-TMK"/>
                             <constraint firstAttribute="trailing" secondItem="nfo-B6-GJ0" secondAttribute="trailing" constant="20" id="rWc-qP-sYW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SKB-Ba-xqq" secondAttribute="trailing" constant="100" id="suT-Vk-toK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="LikeBtn" destination="6Pi-uU-muD" id="AMd-xc-slm"/>
                         <outlet property="heart" destination="O9U-wi-Zvs" id="8GK-4S-r3W"/>
+                        <outlet property="unlike" destination="SKB-Ba-xqq" id="Hlh-T8-WxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,5 +178,6 @@
         <image name="shoes3" width="100" height="100"/>
         <image name="shoes4" width="100" height="100"/>
         <image name="shoes5" width="100" height="100"/>
+        <image name="unlike" width="512" height="512"/>
     </resources>
 </document>

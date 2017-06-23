@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var heart: UIImageView!
     @IBOutlet weak var LikeBtn: UIButton!
+    @IBOutlet weak var unlike: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func likeBtnPressed(_ sender: Any) {
-        heart.isHidden = false
-        UIView.animate(withDuration: 2, animations: {self.heart.alpha = 0})
-        LikeBtn.setTitle("UNLIKE", for: .normal)
+        if heart.isHidden {
+            unlike.isHidden = true
+            unlike.alpha = 1.0
+            
+            heart.isHidden = false
+            UIView.animate(withDuration: 2, animations: {self.heart.alpha = 0})
+            LikeBtn.setTitle("UNLIKE", for: .normal)
+        }
+        else {
+            heart.isHidden = true
+            heart.alpha = 1.0
+            
+            unlike.isHidden = false
+            UIView.animate(withDuration: 2, animations: {self.unlike.alpha = 0})
+            LikeBtn.setTitle("LIKE", for: .normal)
+        }
     }
 
 }
